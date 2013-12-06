@@ -16,6 +16,7 @@ previous releases. You do not need to install version 3.2 prior to installing
 These release notes supplement the product documentation and list enhancements, 
 resolved issues, and known issues in this version. 
 
+
 .. contents:: :local:
   :depth: 1
   :backlinks: none
@@ -103,6 +104,7 @@ synchronized with the `OpenStack Grizzly 2013.1.4 bug fix update <https://wiki.o
 this 2013.1.4 version of Grizzly when deploying an OpenStack environment on CentOS 
 or Ubuntu. For Red Hat Enterprise Linux OpenStack Platform (RHEL-OSP), Fuel will 
 deploy RHEL-OSP version 3.0.
+
 
 A guided deployment wizard to simplify environmental configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -530,6 +532,7 @@ New compute and Cinder nodes can now be added to an existing OpenStack
 environment. However, at the moment, this capability cannot be used to 
 deploy additional controller nodes in the High Availability mode.
 
+
 Other limitations
 ^^^^^^^^^^^^^^^^^
 * The Fuel Master Node is installed with CentOS as the host OS. While OpenStack nodes can be installed with Ubuntu, RHEL, or CentOS as the host OS, the Fuel Master Node is only supported on CentOS.
@@ -569,10 +572,11 @@ Currently, there is a regression introduced by the backporting of the Open
 vSwitch networking code into the CentOS/RHEL kernel, which affects the 
 performance of virtual machines using the paravirtualized VirtIO network 
 adapters. A known workaround is to disable Generic and TCP Segmentation Offload 
-on the VMs by issuing the following commands::
-    ‘ethtool -K <iface_name> gso off’
+on the VMs by issuing the following commands:
+::
+    ethtool -K <iface_name> gso off
 
-    ‘ethtool -K <iface_name> tso off’
+    ethtool -K <iface_name> tso off
 
 File injection into VMs fails on CentOS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -611,6 +615,23 @@ Contacting Support
 You can contact support online, through email, or by phone. Instructions on how 
 to use any of these contact options can be found through `Mirantis Service 
 Desk <https://mirantis.zendesk.com/home>`_.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 To learn more about how Mirantis can help your business, please visit 
 www.mirantis.com.
